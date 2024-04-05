@@ -1,4 +1,3 @@
-#pragma once
 #include <iostream>
 #include "Device.h"
 //#include "List.h"
@@ -54,10 +53,7 @@ int main() {
     //lab6
     NetworkPrinter networkPrinter("HP LaserJet Pro M501dn", Print_Type::LASER, false, 60000, "Wi-Fi");
     MultiFunctionPrinter mfp("Canon MegaTank MAXIFY GX4020", Print_Type::FLOW, true, 45000, "Contact Image Sensor");
-    IDevice* devices[] = { &networkPrinter, &mfp };
-    for (const auto& device : devices) {
-        device->printInfo();
-    }
+
    // list.getDevices();
    // list.SortModel();
    // list.displayDevices();
