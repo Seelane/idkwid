@@ -8,7 +8,7 @@ using namespace std;
 int Device::totalPrinters = 0;
 
 Device::Device(const char* model, Print_Type type, bool Color_print, double price) {
-	setModel(model);
+	Device::setModel(model);
 
 	type_ = type;
 	Color_print_ = Color_print;

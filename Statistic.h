@@ -1,7 +1,6 @@
 #pragma once
 #include <map>
 #include "TempTemp.h"
-using namespace std;
 
 class Statistics {
 public:

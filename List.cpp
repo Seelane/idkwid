@@ -1,14 +1,13 @@
 // List.cpp
-#pragma once
 #include "List.h"
 
-DeviceList::Node::Node(const Device& device, Node* prev = nullptr, Node* next = nullptr) : device(device), prev(prev), next(next) {}
+DeviceList::Node::Node(Device device, Node* prev = nullptr, Node* next = nullptr) : device(std::move(device)), next(next), prev(prev) {}
 
 DeviceList::DeviceList() : head(nullptr), tail(nullptr) {}
 
 DeviceList::~DeviceList() {
     while (head != nullptr) {
-        Node* temp = head;
+        const Node* temp = head;
         head = head->next;
         delete temp;
     }
@@ -26,7 +25,7 @@ void DeviceList::addDevice(const Device& device) {
 }
 
 void DeviceList::removeDevice(const char* model) {
-    Node* node = head;
+    const Node* node = head;
     while (node != nullptr) {
         if (node->device.getModel() == model) {
             if (node->prev != nullptr) {
@@ -50,20 +49,21 @@ void DeviceList::removeDevice(const char* model) {
 
 
 void DeviceList::displayDevices() const {
-    Node* node = head;
+    const Node* node = head;
     while (node != nullptr) {
-//        node->device.printInfo();
+        node->device.printInfo();
         std::cout << node->device << std::endl;
         node = node->next;
     }
 }
 
-void DeviceList::SortColorPrint() {
+void DeviceList::SortColorPrint() const
+{
     if (head == nullptr) {
         return;
     }
 
-    Node* end = nullptr;
+    const Node* end = nullptr;
 
     bool swapped;
     do {
@@ -72,7 +72,7 @@ void DeviceList::SortColorPrint() {
 
         while (current->next != end) {
             if (current->device.getColorPrint() > current->next->device.getColorPrint()) {
-                Device temp = current->device;
+                const Device temp = current->device;
                 current->device = current->next->device;
                 current->next->device = temp;
 
@@ -84,12 +84,13 @@ void DeviceList::SortColorPrint() {
     } while (swapped);
 }
 
-void DeviceList::SortModel() {
+void DeviceList::SortModel() const
+{
     if (head == nullptr) {
         return;
     }
 
-    Node* end = nullptr;
+    const Node* end = nullptr;
 
     bool swapped;
     do {
@@ -98,7 +99,7 @@ void DeviceList::SortModel() {
 
         while (current->next != end) {
             if (current->device < current->next->device) {
-                Device temp = current->device;
+                const Device temp = current->device;
                 current->device = current->next->device;
                 current->next->device = temp;
 
@@ -110,12 +111,13 @@ void DeviceList::SortModel() {
     } while (swapped);
 }
 
-void DeviceList::SortPrice() {
+void DeviceList::SortPrice() const
+{
     if (head == nullptr) {
         return;
     }
 
-    Node* end = nullptr;
+    const Node* end = nullptr;
 
     bool swapped;
     do {
@@ -124,7 +126,7 @@ void DeviceList::SortPrice() {
 
         while (current->next != end) {
             if (current->device.getPrice() > current->next->device.getPrice()) {
-                Device temp = current->device;
+                const Device temp = current->device;
                 current->device = current->next->device;
                 current->next->device = temp;
 
@@ -151,7 +153,7 @@ Device* DeviceList::searchDevice(const char* model) const {
 
 std::vector<Device> DeviceList::getDevices() const {
     std::vector<Device> devices;
-    Node* node = head;
+    const Node* node = head;
     while (node != nullptr) {
         devices.push_back(node->device);
         node = node->next;
@@ -161,7 +163,7 @@ std::vector<Device> DeviceList::getDevices() const {
 
 
 int DeviceList::getSize() const {
-    Node* node = head;
+    const Node* node = head;
     int counterDevice = 0;
 
     while (node != nullptr) {

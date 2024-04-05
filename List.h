@@ -14,7 +14,7 @@ public:
         Node* next;
         Node* prev;
 
-        Node(const Device& device, Node* prev, Node* next);
+        Node(Device device, Node* prev, Node* next);
     };
 
     Node* head;
@@ -30,9 +30,9 @@ public:
 
     void displayDevices() const;
 
-    void SortColorPrint(); // сортировка по признаку Color Print
-    void SortModel();
-    void SortPrice();
+    void SortColorPrint() const; // сортировка по признаку Color Print
+    void SortModel() const;
+    void SortPrice() const;
 
     Device* searchDevice(const char* model) const;
 
