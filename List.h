@@ -30,7 +30,6 @@ public:
 
     void displayDevices() const;
 
-    void SortColorPrint() const; // сортировка по признаку Color Print
     void SortModel() const;
     void SortPrice() const;
 
