@@ -67,13 +67,13 @@ int main() {
     // list.displayDevices();
     // cout << endl << endl;
     // //lab4
-    List<IDevice> list1;
+    List<Device> list1;
     // list1.addDevice(LaserPrinter);
     // list1.addDevice(FlowPrinter);
     // list1.addDevice(MatrixPrinter);
     list1.addDevice(networkPrinter);
     list1.addDevice(mfp);
-    list1.displayDevices();
+     list1.displayDevices();
     // cout << "Wait 2#" << endl << endl;
     // list1.getDevices();
     // list1.SortModel();
