@@ -1,5 +1,6 @@
 #pragma once
 #include "PrintingDevice.h"
+//#include "Photocopier.h"
 
 class MultiFunctionPrinter : public PrintingDevice {
 

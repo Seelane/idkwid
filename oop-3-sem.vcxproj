@@ -129,6 +129,10 @@
   <ItemGroup>
     <ClCompile Include="Device.cpp" />
     <ClCompile Include="List.cpp" />
+    <ClCompile Include="MFP.cpp" />
+    <ClCompile Include="NetworkPrinter.cpp" />
+    <ClCompile Include="Photocopier.cpp" />
+    <ClCompile Include="PrintingDevice.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Statistic.cpp" />
     <ClCompile Include="TempList.cpp" />
@@ -139,6 +143,7 @@
     <ClInclude Include="List.h" />
     <ClInclude Include="MFP.h" />
     <ClInclude Include="NetworkPrinter.h" />
+    <ClInclude Include="Photocopier.h" />
     <ClInclude Include="PrintingDevice.h" />
     <ClInclude Include="Print_Type.h" />
     <ClInclude Include="Statistic.h" />

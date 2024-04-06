@@ -1,8 +1,8 @@
 // Device.cpp
 #include <iostream>
 #include "Device.h"
-//#include "List.h"
-//#include "TempList.h"
+#include "List.h"
+#include "TempList.h"
 using namespace std;
 
 int Device::totalPrinters = 0;

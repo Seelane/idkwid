@@ -8,6 +8,7 @@ public:
 	virtual const char* getModel() const = 0;
 	virtual double getPrice() const = 0;
 
+
 protected:
 	virtual ~IDevice() = default;
 };
