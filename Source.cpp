@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Device.h"
 #include "List.h"
-//#include "TempTemp.h"
+#include "TempTemp.h"
 #include "Statistic.h"
 #include "PrintingDevice.h"
 #include "NetworkPrinter.h"
@@ -67,12 +67,13 @@ int main() {
     // list.displayDevices();
     // cout << endl << endl;
     // //lab4
-    //List<Device> list1;
+    List<IDevice> list1;
     // list1.addDevice(LaserPrinter);
     // list1.addDevice(FlowPrinter);
     // list1.addDevice(MatrixPrinter);
-
-    // list1.displayDevices();
+    list1.addDevice(networkPrinter);
+    list1.addDevice(mfp);
+    list1.displayDevices();
     // cout << "Wait 2#" << endl << endl;
     // list1.getDevices();
     // list1.SortModel();
