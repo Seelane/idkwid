@@ -57,7 +57,7 @@ void DeviceList::displayDevices() const {
     }
 }
 
-void DeviceList::SortColorPrint() const
+void DeviceList::SortPrice() const
 {
     if (head == nullptr) {
         return;
@@ -71,7 +71,7 @@ void DeviceList::SortColorPrint() const
         Node* current = head;
 
         while (current->next != end) {
-            if (current->device.getColorPrint() > current->next->device.getColorPrint()) {
+            if (current->device.getPrice() > current->next->device.getPrice()) {
                 const Device temp = current->device;
                 current->device = current->next->device;
                 current->next->device = temp;
@@ -111,33 +111,6 @@ void DeviceList::SortModel() const
     } while (swapped);
 }
 
-void DeviceList::SortPrice() const
-{
-    if (head == nullptr) {
-        return;
-    }
-
-    const Node* end = nullptr;
-
-    bool swapped;
-    do {
-        swapped = false;
-        Node* current = head;
-
-        while (current->next != end) {
-            if (current->device.getPrice() > current->next->device.getPrice()) {
-                const Device temp = current->device;
-                current->device = current->next->device;
-                current->next->device = temp;
-
-                swapped = true;
-            }
-            current = current->next;
-        }
-        end = current;
-    } while (swapped);
-}
-
 Device* DeviceList::searchDevice(const char* model) const {
 
     Node* node = head;
@@ -147,7 +120,7 @@ Device* DeviceList::searchDevice(const char* model) const {
         }
         node = node->next;
     }
-    return nullptr; 
+    return nullptr;
 }
 
 
