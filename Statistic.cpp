@@ -8,7 +8,7 @@ void Statistics::print() const {
 	cout << "Total price: " << total_price << endl;
 }
 
-void Statistics::sum(Device* device){
+void Statistics::sum(Device* device) {
 	if (printers.count(device)) {
 		printers[device]++;
 	}
@@ -21,5 +21,4 @@ void Statistics::sum(Device* device){
 void Statistics::sum(DeviceList* devic) {
 	for (int i = 0; i < devic->getSize(); i++) sum(&devic[i]);
 }
-
 

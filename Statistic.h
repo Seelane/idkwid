@@ -12,8 +12,8 @@ public:
 	void print() const;
 	void sum(Device* device);
 	void sum(DeviceList* devic);
-// void sum(DeviceList* device);
-//
+	// void sum(DeviceList* device);
+	//
 
 private:
 	std::map<Device*, double> printers;
