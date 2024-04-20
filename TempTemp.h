@@ -26,7 +26,7 @@ public:
             delete temp;
         }
     }
-    void addDevice(const T& data) {
+    void addDevice(T* data) {
         Node* node = new Node(data, tail);
         if (tail != nullptr) {
             tail->next = node;
