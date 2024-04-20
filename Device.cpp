@@ -56,7 +56,7 @@ std::ostream& operator << (std::ostream& xd, const Device& device)
 	return xd;
 }
 
-void Device::printInfo()const {
+void Device::print() const {
 	cout << "Printer #" << printerNumber_ << endl;
 	cout << "Model: " << model_ << endl;
 //	cout << "Print Type: " << getPrintType() << endl;

@@ -1,21 +1,20 @@
 // TempTemp.h
 #pragma once
 #include <vector>
-#include "Device.h"
-
+#include "PrintingDevice.h"
 #include "List.h"
 #include "Print_Type.h"
 #include <string>
-
-
+#include "MFP.h"
+#include "NetworkPrinter.h"
 template <typename T>
 class List {
 public:
     struct Node {
-        T* device;
+        T* data;
         Node* next;
         Node* prev;
-        Node(T* device, Node* prev = nullptr, Node* next = nullptr) : device(device), prev(prev), next(next) {}
+        Node(T* data, Node* prev = nullptr, Node* next = nullptr) : data(data), prev(prev), next(next) {}
     };
     Node* head;
     Node* tail;
@@ -27,8 +26,8 @@ public:
             delete temp;
         }
     }
-    void addDevice(T* device) {
-        Node* node = new Node(device, tail);
+    void addDevice(const T& data) {
+        Node* node = new Node(data, tail);
         if (tail != nullptr) {
             tail->next = node;
         }
@@ -59,10 +58,10 @@ public:
             node = node->next;
         }
     }
-    void displayDevices() const {
+    void print() const {
         Node* node = head;
         while (node != nullptr) {
-            std::cout << node->device << std::endl;
+            std::cout << node->data << std::endl;
             node = node->next;
         }
     }
@@ -76,10 +75,10 @@ public:
             swapped = false;
             Node* current = head;
             while (current->next != end) {
-                if (current->data < current->next->device) {
+                if (current->data < current->next->data) {
                     T temp = current->data;
-                    current->data = current->next->device;
-                    current->next->device = temp;
+                    current->data = current->next->data;
+                    current->next->data = temp;
                     swapped = true;
                 }
                 current = current->next;

@@ -5,17 +5,19 @@
 #include "IDevice.h"
 
 class Device : public IDevice {
+protected:
+	void printNeeded() const;
 public:
 	Device(const char* model, double price);
 
 	static int totalPrinters;
-	void setModel(const char* model) override;
-	void setPrice(double price) override;
+	void setModel(const char* model);
+	void setPrice(double price);
 
-	const char* getModel() const override;
-	double getPrice() const override;
-	//спорный момент
-	void printInfo()const;
+	const char* getModel() const;
+	double getPrice() const;
+	void print() const;
+	
 
 
 	friend std::ostream& operator << (std::ostream& xd, const Device& device);
@@ -28,8 +30,7 @@ public:
 		return model_ == device;
 	}
 
-protected:
-	void printNeeded() const;
+
 
 private:
 	char* model_;

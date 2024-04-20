@@ -8,7 +8,7 @@ MultiFunctionPrinter::MultiFunctionPrinter(const char* model, double price, Prin
 void MultiFunctionPrinter::print() const
 {
 	std::cout << "MultiFunctionPrinter:\n";
-	printNeededP();
+	printNeeded();
 	std::cout << "\nScanner Type: " << scanner_type_;
 	std::cout << "\n#=======================#\n\n";
 }
@@ -23,8 +23,8 @@ const char* MultiFunctionPrinter::getScannerType() const
 	return scanner_type_;
 }
 
-void MultiFunctionPrinter::printNeededMF()
+void MultiFunctionPrinter::printNeeded() const
 {
-	printNeededP();
+	printNeeded();
 	std::cout << "\nScanner Type: " << scanner_type_;
 }

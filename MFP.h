@@ -1,11 +1,11 @@
 #pragma once
 #include "PrintingDevice.h"
-//#include "Photocopier.h"
+
 
 class MultiFunctionPrinter : public PrintingDevice {
 
 public:
-	void print() const override;
+	void print() const;
 
 	void setScannerType(const char* scanner_type);
 	const char* getScannerType() const;
@@ -14,7 +14,7 @@ public:
 
 
 protected:
-	void printNeededMF();
+	void printNeeded() const;
 
 private:
 	const char* scanner_type_;

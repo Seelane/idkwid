@@ -51,7 +51,7 @@ void DeviceList::removeDevice(const char* model) {
 void DeviceList::displayDevices() const {
     const Node* node = head;
     while (node != nullptr) {
-        node->device.printInfo();
+        node->device.print();
         std::cout << node->device << std::endl;
         node = node->next;
     }
