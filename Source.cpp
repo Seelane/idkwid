@@ -68,11 +68,11 @@ int main() {
     // cout << endl << endl;
     // //lab4
     List<IDevice> list1;
-     list1.addDevice(LaserPrinter);
-     list1.addDevice(FlowPrinter);
-     list1.addDevice(MatrixPrinter);
-    list1.addDevice(networkPrinter);
-    list1.addDevice(mfp);
+     list1.addDevice(&LaserPrinter);
+     list1.addDevice(&FlowPrinter);
+     list1.addDevice(&MatrixPrinter);
+    list1.addDevice(&networkPrinter);
+    list1.addDevice(&mfp);
         std::cout << "axaxaxaxaxaaxaxaxaxaxaxax\n\n";
         list1.print();
     // cout << "Wait 2#" << endl << endl;
