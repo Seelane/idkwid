@@ -16,7 +16,7 @@ public:
 	bool getColor_print() const;
 
 protected:
-	void printNeeded() const;
+	void printNeededPD() const;
 
 private:
 	std::string printtype;

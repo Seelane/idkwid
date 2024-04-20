@@ -7,14 +7,14 @@ NetworkPrinter::NetworkPrinter(const char* model, double price, Print_Type type,
 
 void NetworkPrinter::print() const {
 	std::cout << "Network Printer:\n";
-	printNeeded();
+	printNeededPD();
 	std::cout << "\nConnection Type: " << connection_type_;
 	std::cout << "\n#=======================#\n\n";
 }
 
-void NetworkPrinter::printNeeded() const 
+void NetworkPrinter::printNeededN() const 
 {
-	printNeeded();
+	printNeededPD();
 	std::cout << "\nConnection Type: " << getConnectionType();
 }
 

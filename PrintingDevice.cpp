@@ -16,7 +16,7 @@ void PrintingDevice::print() const {
 	std::cout << "\n#=======================#\n\n";
 }
 
-void PrintingDevice::printNeeded() const
+void PrintingDevice::printNeededPD() const
 {
 	printNeeded();
 	std::cout << "Print type: " << getType();

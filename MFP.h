@@ -14,7 +14,7 @@ public:
 
 
 protected:
-	void printNeeded() const;
+	void printNeededM() const;
 
 private:
 	const char* scanner_type_;

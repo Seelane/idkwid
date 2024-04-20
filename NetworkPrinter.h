@@ -12,7 +12,7 @@ public:
 	const char* getConnectionType() const;
 
 protected:
-	void printNeeded() const;
+	void printNeededN() const;
 
 private:
 	const char* connection_type_;

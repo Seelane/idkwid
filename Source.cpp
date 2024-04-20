@@ -87,6 +87,6 @@ int main() {
     // cout << endl << endl;
 
     cout << "\nSuccess?!\n";
-
+    system("pause");
     return 0;
 }
