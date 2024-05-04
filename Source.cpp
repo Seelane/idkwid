@@ -16,12 +16,30 @@ void text_separator() {
 int main() {
     //lab1
     int year = 2022;
+    
+    try
+    {
+        PrintingDevice LaserPrinter("Pantum P2207", -25000, Print_Type::LASER, false);
+            LaserPrinter.print();
+    }
+    catch (const std::invalid_argument& error)
+    {
+        cout << error.what() << endl;
+    }
+    catch (const std::exception& error)
+    {
+        cout << error.what() << endl;
+    }
+    catch (...)
+    {
+        cout << "Error" << endl;
+    }
+
     PrintingDevice LaserPrinter("Pantum P2207", 25000, Print_Type::LASER, false);
     PrintingDevice FlowPrinter("HP Ink Tank 315", 27250, Print_Type::FLOW, true);
     PrintingDevice MatrixPrinter("OKI Ml 390FB", 22750, Print_Type::MATRIC, false);
     PrintingDevice MatrixPrinter2 = MatrixPrinter;
 
-    LaserPrinter.print();
     FlowPrinter.print();
     MatrixPrinter.print();
     cout << "Wait 1#" << endl << endl;
