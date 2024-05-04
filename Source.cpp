@@ -57,7 +57,7 @@ int main() {
     networkPrinter.print();
     mfp.print();
 
-    // //lab4
+
     List<IDevice> list1;
      list1.addDevice(&LaserPrinter);
      list1.addDevice(&FlowPrinter);
@@ -66,17 +66,6 @@ int main() {
     list1.addDevice(&mfp);
         std::cout << "axaxaxaxaxxaxaxaxaxaxax\n\n";
         list1.print();
-    
-    // cout << "Wait 666#" << endl << endl;
-    // list1.getDevices();
-    // list1.SortModel();
-    // list1.displayDevices();
-    // cout << "Wait 3#" << endl << endl;
-    // list1.searchDevice("Pantum P2207");
-    // list1.displayDevices();
-    // list1.removeDevice("Pantum P2207");
-    // list1.displayDevices();
-    // cout << endl << endl;
 
     cout << "\nSuccess?!\n";
     system("pause");

@@ -4,7 +4,7 @@
 #include <iostream>
 #include "IDevice.h"
 
-class Device : public IDevice {
+class Device : public virtual IDevice {
 protected:
 	void printNeeded() const;
 public:

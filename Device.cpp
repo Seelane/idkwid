@@ -29,6 +29,7 @@ void Device::setModel(const char* model)
 
 void Device::setPrice(double price)
 {
+	if (price < 0) throw std::invalid_argument("Negative price!");
 	price_ = price;
 }
 

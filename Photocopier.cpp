@@ -1,6 +1,7 @@
 #include "Photocopier.h"
 
-Photocopier::Photocopier(const char* model, double price, Print_Type type, bool Color_print, const char* scanner_type) : PrintingDevice(model, price, type, Color_print) {
+Photocopier::Photocopier(const char* model, double price, Print_Type type, bool Color_print, const char* scanner_type) 
+	: PrintingDevice(model, price, type, Color_print) {
 	setScannerType(scanner_type);
 }
 
@@ -24,12 +25,12 @@ void Photocopier::printNeededPr() const
 	std::cout << "\nScanner Type: " << scanner_type_;
 }
 
-void Photocopier::setScannerType(const char* scanner_type)
+void Photocopier::setScannerType(std::string scanner_type)
 {
 	scanner_type_ = scanner_type;
 }
 
-const char* Photocopier::getScannerType() const
+std::string Photocopier::getScannerType() const
 {
 	return scanner_type_;
 }
