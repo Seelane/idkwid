@@ -1,17 +1,13 @@
 #pragma once
-#include "PrintingDevice.h"
+#include "NetworkPrinter.h"
+#include "Photocopier.h"
 
-
-class MultiFunctionPrinter : public PrintingDevice {
+class MultiFunctionPrinter : public NetworkPrinter, public Photocopier {
 
 public:
 	void print() const;
 
-	void setScannerType(const char* scanner_type);
-	const char* getScannerType() const;
-
-	MultiFunctionPrinter(const char* model, double price, Print_Type type, bool Color_print, const char* scanner_type);
-
+	MultiFunctionPrinter(const char* model, double price, Print_Type type, bool Color_print, const char* scanner_type, const char* connection_type);
 
 protected:
 	void printNeededM() const;
