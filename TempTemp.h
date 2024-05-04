@@ -61,7 +61,7 @@ public:
     void print() const {
         Node* node = head;
         while (node != nullptr) {
-            std::cout << node->data << std::endl;
+            node->data->print();
             node = node->next;
         }
     }

@@ -73,7 +73,7 @@ int main() {
      list1.addDevice(&MatrixPrinter);
     list1.addDevice(&networkPrinter);
     list1.addDevice(&mfp);
-        std::cout << "axaxaxaxaxaaxaxaxaxaxaxax\n\n";
+        std::cout << "axaxaxaxaxxaxaxaxaxaxax\n\n";
         list1.print();
     // cout << "Wait 2#" << endl << endl;
     // list1.getDevices();
