@@ -53,7 +53,7 @@ int main() {
 
     //lab6
     NetworkPrinter networkPrinter("HP LaserJet Pro M501dn", 60000, Print_Type::LASER, false, "Wi-Fi");
-    MultiFunctionPrinter mfp("Canon MegaTank MAXIFY GX4020", 45000, Print_Type::FLOW, true, "Contact Image Sensor");
+    MultiFunctionPrinter mfp("Canon MegaTank MAXIFY GX4020", 45000, Print_Type::FLOW, true, , "Wi-Fi", "Contact Image Sensor");
     networkPrinter.print();
     mfp.print();
 
